@@ -1,11 +1,14 @@
 body {
   font-family: "Helvetica", "Arial", sans-serif;
   line-height: 1.5;
-
   max-width: 960px;
   margin: 20px auto;
   display: grid;
   grid-template-columns: 1fr 2fr;
+  grid-template-areas:
+    "header  header"
+    "nav     main"
+    "footer  footer";
   grid-gap: 20px;
 }
 
@@ -24,6 +27,25 @@ footer {
   padding-left: 20px;
 }
 
+header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: nav;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  grid-area: main;
+  /*
+    We're declaring main as a grid area in the body's grid, but also
+    setting up main to have its own grid!
+  */
+}
+
 section {
   background-color: #ddd;
   padding: 20px;
@@ -33,33 +55,18 @@ section p {
   margin-bottom: 0;
 }
 
-header {
-  grid-column: 1 / 3;
-
-  /* also:
-    grid column: 1 / -1;
-  or
-    grid-column: 1 / span 2;
-  */
-}
-
-nav {
-  grid-row: 2 / 4;
-
-  /* also:
-    grid-row: 2 / span 2;
-  */
-
-}
-
 footer {
-  grid-column: 2 / 3;
+  grid-area: footer;
+}
 
-  /* also:
-    grid-column: 2;
-  or
-    grid-column: 2 / -1;
-  or
-    grid-column: 2 / span 1;
-  */
+#welcome {
+  grid-column: 1 / -1;
+}
+
+#cats {
+  grid-column: 1;
+}
+
+#coming-soon {
+  grid-column: 1;
 }
