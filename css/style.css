@@ -64,9 +64,9 @@ footer {
 }
 
 #cats {
-  grid-column: 1 / -1;
+  grid-column: 1;
 }
 
 #coming-soon {
-  grid-column: 2;
+  grid-column: 1;
 }
