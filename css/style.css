@@ -69,4 +69,5 @@ footer {
 
 #coming-soon {
   grid-column: 2;
+  grid-row: 1
 }
