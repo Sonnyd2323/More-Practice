@@ -1,55 +1,18 @@
 body {
-  font-family: "Helvetica", "Arial", sans-serif;
-  line-height: 1.5;
-  max-width: 960px;
-  margin: 20px auto;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-gap: 20px;
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
 }
 
-h2 {
-  margin-top: 0;
+.container {
+display: grid;
+grid-template-columns: 200px auto 200px;
 }
 
-header,
-nav,
-footer {
-  background-color: #eee;
-}
-
-section {
-  background-color: #ddd;
-  padding: 20px;
-}
-
-section p {
-  margin-bottom: 0;
-}
-
-header,
-footer {
-  padding-left: 20px;
-  grid-column: 1 / -1;
-}
-
-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
-  grid-template-areas:
-    "welcome  welcome"
-    "cats     coming-soon";
-}
-
-#welcome {
-  grid-area: welcome;
-}
-
-#coming-soon {
-  grid-area: coming-soon;
-}
-
-#cats {
-  grid-area: cats;
-}
+#header {
+background-color: #333;
+color: white;
+padding: 20px;
+text-align: center;
+box-sizing: border-box;
+grid-column:
